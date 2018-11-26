@@ -220,3 +220,9 @@ variable "parameter_group_name" {
   description = "Name of the DB parameter group to associate"
   default     = ""
 }
+
+variable "performance_insights_enabled" {
+  type        = "string"
+  description = "Enable performance insights for the rds instance"
+  default     = "false"
+}

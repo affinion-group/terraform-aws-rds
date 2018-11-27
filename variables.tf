@@ -220,3 +220,9 @@ variable "parameter_group_name" {
   description = "Name of the DB parameter group to associate"
   default     = ""
 }
+
+variable "deletion_protection" {
+  type        = "string"
+  description = "(Optional) If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to true. The default is false."
+  default     = "false"
+}

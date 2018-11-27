@@ -47,6 +47,7 @@ resource "aws_db_instance" "default" {
   backup_window                = "${var.backup_window}"
   tags                         = "${module.label.tags}"
   final_snapshot_identifier    = "${length(var.final_snapshot_identifier) > 0 ? var.final_snapshot_identifier : module.final_snapshot_label.id}"
+  deletion_protection          = "${var.deletion_protection}"
 }
 
 resource "aws_db_parameter_group" "default" {

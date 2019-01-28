@@ -226,3 +226,11 @@ variable "deletion_protection" {
   description = "(Optional) If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to true. The default is false."
   default     = "false"
 }
+
+variable "iam_database_authentication_enabled" {
+  type        = "string"
+  description = "(Optional) Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled."
+  default     = "false"
+}
+
+

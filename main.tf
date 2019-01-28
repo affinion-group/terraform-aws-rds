@@ -48,6 +48,7 @@ resource "aws_db_instance" "default" {
   tags                         = "${module.label.tags}"
   final_snapshot_identifier    = "${length(var.final_snapshot_identifier) > 0 ? var.final_snapshot_identifier : module.final_snapshot_label.id}"
   deletion_protection          = "${var.deletion_protection}"
+  iam_database_authentication_enabled = "${var.iam_database_authentication_enabled}"
 }
 
 resource "aws_db_parameter_group" "default" {

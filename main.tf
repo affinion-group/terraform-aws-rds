@@ -52,6 +52,10 @@ resource "aws_db_instance" "default" {
   monitoring_role_arn         = var.monitoring_role_arn
 
   iam_database_authentication_enabled = var.iam_database_authentication_enabled
+
+  performance_insights_enabled          = var.performance_insights_enabled
+  performance_insights_kms_key_id       = var.performance_insights_enabled ? var.performance_insights_kms_key_id : null
+  performance_insights_retention_period = var.performance_insights_enabled ? var.performance_insights_retention_period : null
 }
 
 resource "aws_db_parameter_group" "default" {
